@@ -19,6 +19,7 @@ async def create_summary(payload: SummaryPayloadSchema) -> SummaryResponseSchema
     }
     return response_object
 
+
 @router.get("/{id}/", response_model=SummarySchema)
 async def read_summary(id: int) -> SummarySchema:
     summary = await crud.get(id)
@@ -26,6 +27,7 @@ async def read_summary(id: int) -> SummarySchema:
         raise HTTPException(status_code=404, detail="Summary not found")
 
     return summary
+
 
 @router.get("/", response_model=List[SummarySchema])
 async def read_all_summaries() -> List[SummarySchema]:
