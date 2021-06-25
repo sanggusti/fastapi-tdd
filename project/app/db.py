@@ -1,12 +1,12 @@
-import logging  # new
+import logging
 import os
 
 from fastapi import FastAPI
-from tortoise import Tortoise, run_async # updated
+from tortoise import Tortoise, run_async
 from tortoise.contrib.fastapi import register_tortoise
 
 
-log = logging.getLogger("uvicorn") # new
+log = logging.getLogger("uvicorn")
 
 
 def init_db(app: FastAPI) -> None:
@@ -19,7 +19,6 @@ def init_db(app: FastAPI) -> None:
     )
 
 
-# new
 async def generate_schema() -> None:
     log.info("Initializing Tortoise...")
 
@@ -32,6 +31,5 @@ async def generate_schema() -> None:
     await Tortoise.close_connections()
 
 
-# new
 if __name__ == '__main__':
     run_async(generate_schema())
