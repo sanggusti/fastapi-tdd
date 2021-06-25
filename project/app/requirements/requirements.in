@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+gunicorn
+newspaper3k
+requests
+tortoise-orm
+asyncpg
+pytest
