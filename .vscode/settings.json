@@ -1,0 +1,16 @@
+{
+    "python.pythonPath": "project/app/env/bin/python3",
+    "python.linting.flake8Path": "project/app/env/bin/flake8",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--ignore=E402,F841,F401,E302,E305",
+        "--verbose",
+        "--max-line-length=119"
+    ],
+    "python.languageServer": "Pylance",
+    "python.analysis.extraPaths": [
+        "project/app",
+        "project/app/api",
+        "project/app/models"
+    ]
+}
