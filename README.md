@@ -58,6 +58,25 @@ server: uvicorn
 
 feel free to try hit this service as api to your webapp!
 
+
+## Objectives
+- [x] Develop an asynchronous RESTful API with Python and FastAPI
+- [x] Practice Test-Driven Development
+- [x] Test a FastAPI app with pytest
+- [x] Interact with a Postgres database asynchronously
+- [x] Containerize FastAPI and Postgres inside a Docker container
+- [x] Run unit and integration tests with code coverage inside a Docker container
+- [x] Check your code for any code quality issues via a linter
+- [x] Configure GitHub Actions for continuous integration and deployment
+- [x] Use GitHub Packages to store Docker Images
+- [x] Speed up a Docker-based CI build with Docker Cache
+- [x] Deploy FastAPI, Uvicorn, and Postgres to Heroku with Docker
+- [x] Parameterize test functions and mock functionality in tests with pytest
+- [x] Run tests in parallel with pytest-xdist
+- [x] Document a RESTful API with Swagger/OpenAPI
+- [x] Run a background process outside the request/response flow
+
+
 ## Project Structure
 
 ```
