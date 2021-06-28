@@ -12,12 +12,11 @@ services:
     environment:
       - ENVIRONMENT=dev
       - TESTING=0
-      - DATABASE_URL=postgres://postgres:postgres@web-db:5432/web_dev        # new
-      - DATABASE_TEST_URL=postgres://postgres:postgres@web-db:5432/web_test  # new
-    depends_on:   # new
+      - DATABASE_URL=postgres://postgres:postgres@web-db:5432/web_dev
+      - DATABASE_TEST_URL=postgres://postgres:postgres@web-db:5432/web_test
+    depends_on:
       - web-db
 
-  # new
   web-db:
     build:
       context: ./project/db
