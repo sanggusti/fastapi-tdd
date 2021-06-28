@@ -8,9 +8,55 @@ This project is delivering backend service of page summarizer using various stac
 
 ## How to use
 
-Simply clone, `docker-compose up -d --build` and redirect to http://localhost:8004/docs.
+For development :
 
-To do unit test, execute `docker-compose exec python -m pytest`.
+Simply clone, `docker-compose up -d --build` and redirect to http://localhost:8004/docs. To do unit test, execute `docker-compose exec python -m pytest`.
+
+For usage as service :
+
+-  Adding a new summary
+```
+$ http --json POST https://evening-brook-44287.herokuapp.com/summaries/ url=https://your_url.etc
+```
+
+example:
+```
+$ http --json POST http://localhost:8004/summaries/ url=http://testdriven.io
+
+HTTP/1.1 201 Created
+content-length: 34
+content-type: application/json
+date: Sun, 10 May 2020 15:59:54 GMT
+server: uvicorn
+
+{
+    "id": 5,
+    "url": "http://testdriven.io"
+}
+```
+- Get the summary
+```
+$ http GET https://evening-brook-44287.herokuapp.com/summaries/{output_id}/
+```
+example
+```
+$ http GET http://localhost:8004/summaries/5/
+
+HTTP/1.1 200 OK
+content-length: 134
+content-type: application/json
+date: Sun, 10 May 2020 16:00:09 GMT
+server: uvicorn
+
+{
+    "created_at": "2020-05-10T15:59:55.098074",
+    "id": 5,
+    "summary": "",
+    "url": "http://testdriven.io"
+}
+```
+
+feel free to try hit this service as api to your webapp!
 
 ## Project Structure
 
