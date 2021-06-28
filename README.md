@@ -2,9 +2,11 @@
 
 ![Continuous Integration and Delivery](https://github.com/sanggusti/fastapi-tdd/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
 
+
 ## Overview
 
 This project is delivering backend service of page summarizer using various stacks that are pivoting around `fastapi`, `docker`, `postgresql`, `pytest` and `nltk`. Dedicated to develop based on test driven as best practice in software development and also with Continuous Integration and Continuous Development.
+
 
 ## How to use
 
