@@ -5,9 +5,3 @@ newspaper3k==0.2.8
 requests==2.25.1
 tortoise-orm==0.16.21
 uvicorn==0.13.4
-black==20.8b1
-flake8===3.8.4
-isort==5.7.0
-pytest==6.2.2
-pytest-cov==2.11.1
-pytest-xdist==2.2.1
